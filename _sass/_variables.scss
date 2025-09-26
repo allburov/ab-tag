@@ -1,0 +1,36 @@
+
+//
+// VARIABLES
+//
+
+// Colors
+$blue: #4183C4;
+
+// Dark theme palette (hacky/dev look)
+$bg: #0F172A;          // page background (matches provided SVG)
+$panel: #0B1220;       // card background
+$border: #1F2937;      // subtle borders
+$text: #E5E7EB;        // primary text
+$muted: #94A3B8;       // secondary text
+$accent: #22D3EE;      // cyan accent
+$accent2: #10B981;     // green accent (optional)
+
+// Grays
+$black: #000;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #666;
+$lightGray: #eee;
+$white: #fff;
+
+// Font stacks
+$helvetica: Helvetica, Arial, sans-serif;
+$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$georgia: Georgia, serif;
+
+// Mobile breakpoints
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
