@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Проверка доступности оплаты банковскими картами
-tags: [ПРОЕКТ, C#, MYSQL, PHP]
+tags: [C#, MYSQL, PHP]
 read_more_label: Подробнее про проект
 ---
 

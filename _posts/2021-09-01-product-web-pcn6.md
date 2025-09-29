@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Веб-интерфейс к пожарно-охранной системе PCN6 фирмы RITM
-tags: [ПРОЕКТ, PHP, MYSQL]
+tags: [PHP, MYSQL]
 read_more_label: Подробнее про WEB PCN6
 ---
 
