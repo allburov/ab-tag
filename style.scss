@@ -542,8 +542,8 @@ footer { padding: 20px 0; text-align: center; color: $muted; }
 
 .post .step-flow .step__action:hover,
 .post .step-flow .step__action:focus {
-  border-color: rgba($accent, .8);
+  border-color: $accent;
   background: transparent;
-  box-shadow: 0 8px 8px rgba($accent, .22);
-  color: lighten($accent, 6%);
+  box-shadow: 0 0 18px rgba($accent, .18);
+  color: lighten($accent, 10%);
 }
