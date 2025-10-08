@@ -4,7 +4,18 @@ layout: default
 
 <div class="posts">
   {% for post in site.posts %}
-    <article class="post{% if post.highlight %} post--highlight{% endif %}">
+    {% assign highlight_class = '' %}
+    {% if post.highlight %}
+      {% if post.highlight == true %}
+        {% assign highlight_class = ' post--highlight' %}
+      {% else %}
+        {% assign highlight_value = post.highlight | downcase | strip | replace: ' ', '-' %}
+        {% if highlight_value != 'none' and highlight_value != '' %}
+          {% assign highlight_class = ' post--highlight-' | append: highlight_value %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+    <article class="post{{ highlight_class }}">
 
       {% if post.title_clickable == false %}
       <h1>{{ post.title }}</h1>

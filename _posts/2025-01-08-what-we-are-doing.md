@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 🛠️ Чем занимаемся
-highlight: true
+highlight: accent
 title_clickable: false
 ---
 

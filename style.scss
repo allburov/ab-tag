@@ -329,17 +329,38 @@ nav {
 }
 
 // Highlighted post (e.g., About)
+@mixin post-highlight($color) {
+  border-color: rgba($color, .6);
+  box-shadow: 0 12px 36px rgba(0,0,0,.45), 0 0 0 1px rgba($color, .12) inset;
+  background: linear-gradient(180deg, rgba($color, .03), transparent 40%) $panel;
+}
+
+@mixin post-highlight-hover($color) {
+  border-color: rgba($color, .75);
+  box-shadow: 0 14px 40px rgba(0,0,0,.50), 0 0 0 1px rgba($color, .16) inset;
+}
+
+$post-highlight-variants: (
+  accent: $accent,
+  accent2: $accent2
+);
+
 .post--highlight {
-  border-color: rgba($accent2, .6);
-  // Subtle green-tinted lift to match tags
-  box-shadow: 0 12px 36px rgba(0,0,0,.45), 0 0 0 1px rgba($accent2, .12) inset;
-  background: linear-gradient(180deg, rgba($accent2, .03), transparent 40%) $panel;
+  @include post-highlight(map-get($post-highlight-variants, accent2));
 }
 
 .post--highlight:hover {
-  // Keep consistent with green accent on hover
-  border-color: rgba($accent2, .75);
-  box-shadow: 0 14px 40px rgba(0,0,0,.50), 0 0 0 1px rgba($accent2, .16) inset;
+  @include post-highlight-hover(map-get($post-highlight-variants, accent2));
+}
+
+@each $variant, $color in $post-highlight-variants {
+  .post--highlight-#{$variant} {
+    @include post-highlight($color);
+  }
+
+  .post--highlight-#{$variant}:hover {
+    @include post-highlight-hover($color);
+  }
 }
 
 // Dim overly bright images only for specific posts
