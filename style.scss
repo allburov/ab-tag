@@ -530,3 +530,21 @@ footer { padding: 20px 0; text-align: center; color: $muted; }
   align-items: center;
   gap: 6px;
 }
+
+.post .step-flow .step__action {
+  padding: 8px 18px;
+  border: 1px solid rgba($accent, .55);
+  border-radius: 999px;
+  background: rgba($accent, .08);
+  font-weight: 600;
+  box-shadow: 0 6px 22px rgba($accent, .16);
+  transition: border-color .15s ease, background .15s ease, box-shadow .15s ease, color .15s ease;
+}
+
+.post .step-flow .step__action:hover,
+.post .step-flow .step__action:focus {
+  border-color: rgba($accent, .8);
+  background: rgba($accent, .12);
+  box-shadow: 0 8px 26px rgba($accent, .22);
+  color: lighten($accent, 6%);
+}
